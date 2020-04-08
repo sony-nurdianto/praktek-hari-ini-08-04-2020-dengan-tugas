@@ -9,20 +9,30 @@ axios.get('http://localhost:3000/list')
 
         response.data.forEach(item =>{
             const {id,name,address,email,phone,company} = item ;
-            const itemHTML = `<li>
-                name : ${name}
-                <br>
-                address : ${address}
-                <br>
-                email : ${email}
-                <br>
-                phone : ${phone}
-                <br>
-                company : ${company}
-                <br>
-                <button onclick="hapus(${id})">hapus</button>
-                <button onclick="ubah(${id})">edit</button>
-            </li>`
+            const itemHTML =`<div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">${name}</h5>
+              <p class="card-text">company name : ${company} email :${email} address:${address} phone :${phone} </p>
+              <button class="btn btn-primary" onclick="ubah(${id})">edit</button>
+              <button class="btn btn-primary" onclick="hapus(${id})">hapus</button>
+            </div>
+          </div>`
+            
+            //`<li>
+            //     name : ${name}
+            //     <br>
+            //     address : ${address}
+            //     <br>
+            //     email : ${email}
+            //     <br>
+            //     phone : ${phone}
+            //     <br>
+            //     company : ${company}
+            //     <br>
+            //     <button onclick="hapus(${id})">hapus</button>
+            //     <button onclick="ubah(${id})">edit</button>
+            // </li>`
             dataHTML.innerHTML += itemHTML
         })
     })

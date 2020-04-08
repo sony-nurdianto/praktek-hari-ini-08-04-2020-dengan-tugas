@@ -1,3 +1,12 @@
 {
-  "list": []
+  "list": [
+    {
+      "name": "halo",
+      "address": "kedurus Gg 4a no 32 b",
+      "email": "sonynurdianto445@gmail.com",
+      "phone": "0908098",
+      "company": "987",
+      "id": 1
+    }
+  ]
 }
