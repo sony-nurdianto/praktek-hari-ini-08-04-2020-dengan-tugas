@@ -9,11 +9,16 @@ axios.get('http://localhost:3000/list')
 
         response.data.forEach(item =>{
             const {id,name,address,email,phone,company} = item ;
-            const itemHTML =`<div class="col-md-4 margin-btm"><div class="card">
-            <img src="./images/images(2).jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
+            const itemHTML =`<div class="col-md-4 margin-btm "><div class="card ">
+            <img src="./images/wayang.jpeg" class="card-img-top" alt="...">
+            <div class="card-body shadow-lg">
               <h5 class="card-title">${name}</h5>
-              <p class="card-text">company name : ${company} email :${email} address:${address} phone :${phone} </p>
+              <ul class="list">
+                <li>company names : ${company}</li>
+                <li>email : ${email}</li>
+                <li>address : ${address}</li>
+                <li>phone : ${phone}</li>
+              </ul>
               <button class="btn btn-primary" onclick="ubah(${id})">edit</button>
               <button class="btn btn-primary" onclick="hapus(${id})">hapus</button>
             </div>
