@@ -4,19 +4,20 @@ axios.get('http://localhost:3000/list')
     .then((response) => {
         console.log(response)
 
-        const dataHTML = document.querySelector("#list>ol")
+        const dataHTML = document.querySelector("#list")
         data = response.data;
 
         response.data.forEach(item =>{
             const {id,name,address,email,phone,company} = item ;
-            const itemHTML =`<div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            const itemHTML =`<div class="col-md-4 margin-btm"><div class="card">
+            <img src="./images/images(2).jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">${name}</h5>
               <p class="card-text">company name : ${company} email :${email} address:${address} phone :${phone} </p>
               <button class="btn btn-primary" onclick="ubah(${id})">edit</button>
               <button class="btn btn-primary" onclick="hapus(${id})">hapus</button>
             </div>
+          </div>
           </div>`
             
             //`<li>
